@@ -1,13 +1,13 @@
 let user = prompt("Enter Scissors, Paper, or Rock")
-user = user.toUpperCase()
+user = user.toLowerCase()
 let cpuI = Math.floor(Math.random() * 3)
-let cpu = ["SCISSORS", "ROCK", "PAPER"][cpuI]
+let cpu = ["scissors", "paper", "rock"][cpuI]
 
 const match = () => {
   if (user === cpu) {
     return "It's a tie. Nobody wins"
   }
-  else if ((user === "rock" && cpu === "paper") ||
+  else if ((user === "rock" && cpu === "scissors") ||
     (user === "paper" && cpu === "rock") ||
     (user === "scissors" && cpu === "paper")) {
     return "Congratulations! 🥳 You win"
